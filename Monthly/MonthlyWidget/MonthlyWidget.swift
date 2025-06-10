@@ -47,12 +47,10 @@ struct MonthlyWidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        VStack {
-            Text("Time:")
-            Text(entry.date, style: .time)
-
-            Text("Emoji:")
-            Text(entry.emoji)
+        ZStack {
+            VStack {
+                Text(entry.date, style: .time)
+            }
         }
     }
 }
@@ -62,14 +60,8 @@ struct MonthlyWidget: Widget {
 
     var body: some WidgetConfiguration {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
-            if #available(iOS 17.0, *) {
-                MonthlyWidgetEntryView(entry: entry)
-                    .containerBackground(.fill.tertiary, for: .widget)
-            } else {
-                MonthlyWidgetEntryView(entry: entry)
-                    .padding()
-                    .background()
-            }
+            MonthlyWidgetEntryView(entry: entry)
+                .widgetBackgroundColor(Color.blue)
         }
         .configurationDisplayName("My Widget")
         .description("This is an example widget.")
@@ -81,4 +73,15 @@ struct MonthlyWidget: Widget {
 } timeline: {
     SimpleEntry(date: .now, emoji: "😀")
     SimpleEntry(date: .now, emoji: "🤩")
+}
+
+extension View {
+    @ViewBuilder
+    func widgetBackgroundColor(_ color: Color) -> some View {
+        if #available(iOS 17.0, *) {
+            self.containerBackground(color, for: .widget)
+        } else {
+            self.background(color)
+        }
+    }
 }
