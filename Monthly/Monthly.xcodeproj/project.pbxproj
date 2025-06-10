@@ -6,14 +6,65 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		F74041A92DF6500C00236D28 /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F74041A82DF6500C00236D28 /* WidgetKit.framework */; };
+		F74041AB2DF6500C00236D28 /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F74041AA2DF6500C00236D28 /* SwiftUI.framework */; };
+		F74041B62DF6500E00236D28 /* MonthlyWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = F74041A62DF6500C00236D28 /* MonthlyWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F74041B42DF6500E00236D28 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F74041892DF64F9600236D28 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F74041A52DF6500C00236D28;
+			remoteInfo = MonthlyWidgetExtension;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F74041BB2DF6500E00236D28 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F74041B62DF6500E00236D28 /* MonthlyWidgetExtension.appex in Embed Foundation Extensions */,
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		F74041912DF64F9600236D28 /* Monthly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Monthly.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F74041A62DF6500C00236D28 /* MonthlyWidgetExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MonthlyWidgetExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		F74041A82DF6500C00236D28 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		F74041AA2DF6500C00236D28 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		F74041B72DF6500E00236D28 /* Exceptions for "MonthlyWidget" folder in "MonthlyWidgetExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = F74041A52DF6500C00236D28 /* MonthlyWidgetExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		F74041932DF64F9600236D28 /* Monthly */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Monthly;
+			sourceTree = "<group>";
+		};
+		F74041AC2DF6500C00236D28 /* MonthlyWidget */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				F74041B72DF6500E00236D28 /* Exceptions for "MonthlyWidget" folder in "MonthlyWidgetExtension" target */,
+			);
+			path = MonthlyWidget;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -26,6 +77,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F74041A32DF6500C00236D28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F74041AB2DF6500C00236D28 /* SwiftUI.framework in Frameworks */,
+				F74041A92DF6500C00236D28 /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -33,6 +93,8 @@
 			isa = PBXGroup;
 			children = (
 				F74041932DF64F9600236D28 /* Monthly */,
+				F74041AC2DF6500C00236D28 /* MonthlyWidget */,
+				F74041A72DF6500C00236D28 /* Frameworks */,
 				F74041922DF64F9600236D28 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,8 +103,18 @@
 			isa = PBXGroup;
 			children = (
 				F74041912DF64F9600236D28 /* Monthly.app */,
+				F74041A62DF6500C00236D28 /* MonthlyWidgetExtension.appex */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		F74041A72DF6500C00236D28 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F74041A82DF6500C00236D28 /* WidgetKit.framework */,
+				F74041AA2DF6500C00236D28 /* SwiftUI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -55,10 +127,12 @@
 				F740418D2DF64F9600236D28 /* Sources */,
 				F740418E2DF64F9600236D28 /* Frameworks */,
 				F740418F2DF64F9600236D28 /* Resources */,
+				F74041BB2DF6500E00236D28 /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				F74041B52DF6500E00236D28 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				F74041932DF64F9600236D28 /* Monthly */,
@@ -69,6 +143,28 @@
 			productName = Monthly;
 			productReference = F74041912DF64F9600236D28 /* Monthly.app */;
 			productType = "com.apple.product-type.application";
+		};
+		F74041A52DF6500C00236D28 /* MonthlyWidgetExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F74041B82DF6500E00236D28 /* Build configuration list for PBXNativeTarget "MonthlyWidgetExtension" */;
+			buildPhases = (
+				F74041A22DF6500C00236D28 /* Sources */,
+				F74041A32DF6500C00236D28 /* Frameworks */,
+				F74041A42DF6500C00236D28 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				F74041AC2DF6500C00236D28 /* MonthlyWidget */,
+			);
+			name = MonthlyWidgetExtension;
+			packageProductDependencies = (
+			);
+			productName = MonthlyWidgetExtension;
+			productReference = F74041A62DF6500C00236D28 /* MonthlyWidgetExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -81,6 +177,9 @@
 				LastUpgradeCheck = 1620;
 				TargetAttributes = {
 					F74041902DF64F9600236D28 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					F74041A52DF6500C00236D28 = {
 						CreatedOnToolsVersion = 16.2;
 					};
 				};
@@ -100,12 +199,20 @@
 			projectRoot = "";
 			targets = (
 				F74041902DF64F9600236D28 /* Monthly */,
+				F74041A52DF6500C00236D28 /* MonthlyWidgetExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		F740418F2DF64F9600236D28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F74041A42DF6500C00236D28 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +229,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		F74041A22DF6500C00236D28 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F74041B52DF6500E00236D28 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F74041A52DF6500C00236D28 /* MonthlyWidgetExtension */;
+			targetProxy = F74041B42DF6500E00236D28 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		F740419D2DF64F9700236D28 /* Debug */ = {
@@ -302,6 +424,60 @@
 			};
 			name = Release;
 		};
+		F74041B92DF6500E00236D28 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DP222QB35B;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MonthlyWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MonthlyWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.rohith.sampleApp.Monthly.MonthlyWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F74041BA2DF6500E00236D28 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DP222QB35B;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = MonthlyWidget/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = MonthlyWidget;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = co.rohith.sampleApp.Monthly.MonthlyWidget;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -319,6 +495,15 @@
 			buildConfigurations = (
 				F74041A02DF64F9700236D28 /* Debug */,
 				F74041A12DF64F9700236D28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F74041B82DF6500E00236D28 /* Build configuration list for PBXNativeTarget "MonthlyWidgetExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F74041B92DF6500E00236D28 /* Debug */,
+				F74041BA2DF6500E00236D28 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
